@@ -100,6 +100,7 @@ gini.summary()
 **Fit the absolute weighted $\alpha$-Gini index**
 
 * The weighted absolute $\alpha$-Gini index:
+
 $$
 \mathcal G_\alpha = 
 \frac{
