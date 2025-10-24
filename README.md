@@ -63,7 +63,24 @@ model.fit(data=df, value="income", group="group", weight="weight")
 model.summary()
 ```
 
-```text +-----------------------------------+-----------+ | Gini decomposition: 2 components | Index | +-----------------------------------+-----------+ | Gini within groups (Gw) | 0.0019 | | Gini between groups (Ggb) | 0.0722 | | Gini total (Gw + Ggb) | 0.0741 | | Gini total (verif.) | 0.0741 | +-----------------------------------+-----------+ +-----------------------------------+-----------+ | Gini decomposition: 3 components | Index | +-----------------------------------+-----------+ | Gini within groups (Gw) | 0.0019 | | Gini net between groups (Gnb) | 0.0722 | | Gini transvariation (Gt) | 0.0000 | | Gini total (Gw + Gnb + Gt) | 0.0741 | +-----------------------------------+-----------+ Matrix of between-group Gini indices G_gh: ``` 
+**Gini decomposition: 2 components**
+
+| Component                        | Index   |
+|----------------------------------|----------|
+| Gini within groups (`G_w`)       | 0.0019   |
+| Gini between groups (`G_gb`)     | 0.0722   |
+| Gini total (`G_w + G_gb`)        | 0.0741   |
+| Gini total (verification)        | 0.0741   |
+
+**Gini decomposition: 3 components**
+
+| Component                        | Index   |
+|----------------------------------|----------|
+| Gini within groups (`G_w`)       | 0.0019   |
+| Gini net between groups (`G_nb`) | 0.0722   |
+| Gini transvariation (`G_t`)      | 0.0000   |
+| Gini total (`G_w + G_nb + G_t`)  | 0.0741   |
+
 
 
 **Fit Dagum's Gini decomposition with weights: $\alpha=1$**
