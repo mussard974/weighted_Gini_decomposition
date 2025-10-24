@@ -45,7 +45,7 @@ prettytable
 
 ```python
 import pandas as pd
-from gini_decomposition import GiniDecomposition
+from Gini_decomp_weight import GiniDecomposition
 
 # Example dataset
 df = pd.DataFrame({
@@ -60,7 +60,7 @@ df = pd.DataFrame({
 model = GiniDecomposition(alpha=2)
 model.fit(data=df, value="income", group="group", weight="weight")
 # Show summary
-gini.summary()
+model.summary()
 ```
 
 **Fit Dagum's Gini decomposition with weights: $\alpha=1$**
