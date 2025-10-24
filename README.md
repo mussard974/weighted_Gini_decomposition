@@ -118,7 +118,7 @@ $$
 ```python
 model = GiniDecomposition(alpha=1)
 model.fit(data=df, value="income", group="group", weight="weight")
-gini.summary()
+model.summary()
 ```
 
 **Fit the absolute weighted $\alpha$-Gini index**
@@ -137,7 +137,7 @@ $$
 ```python
 model = GiniDecomposition(alpha=2, method='absolute')
 model.fit(data=df, value="income", group="group", weight="weight")
-gini.summary()
+model.summary()
 ```
 
 **Fit the $(\alpha-\beta)$-decomposition of the Gini index**
@@ -164,5 +164,16 @@ $$
 ```python
 model = GiniDecomposition(alpha=3, beta = 2)
 model.fit(data=df, value="income", group="group", weight="weight")
-gini.summary()
+model.summary()
 ```
+
+* Example of the results of the $\beta$-distance:
+
+|       | A      | B      | C      |
+|-------|--------|--------|--------|
+| **A** | 0.0000 | 1.0000 | 1.0000 |
+| **B** | 1.0000 | 0.0000 | 1.0000 |
+| **C** | 1.0000 | 1.0000 | 0.0000 |
+
+
+
