@@ -1,12 +1,15 @@
-# Decomposition of the weighted $\alpha$-Gini index
+# Decomposition of the weighted $\alpha$-Gini index in *Torch*
 
-**Weighted (α, β)-Gini Decomposition in PyTorch**
+---
 
-This repository provides a modular Python class for computing **multi-level weighted Gini decompositions** following the methods introduced in:
+This repository provides a modular Python class for computing the **weighted $\alpha$-Gini index decompositions** 
+
+**Sampling weights** are introduced in the following decompositions: 
 
 - Mornet, P., Zoli, C., Mussard, S., Sadefo-Kamdem, J., Seyte, F., Terraza, M. (2013).  
   *The (α, β)-multi-level α-Gini decomposition with an illustration to income inequality in France in 2005.*  
   *Economic Modelling*, 35(C), 944–963.
+  DOI: 10.1016/j.econmod.2013.06.016 
 
 - Mussard, S. & Mornet, P. (2019).  
   *A Note on α-Gini Measures.*  
@@ -15,20 +18,13 @@ This repository provides a modular Python class for computing **multi-level weig
 
 ---
 
-## 📦 Features
+## Functions
 
-- Weighted within-group and between-group Gini computation  
-- Support for α-Gini and (α, β)-Gini indices  
+- Weighted within-group and between-group Gini 
+- α-Gini and (α, β)-Gini decompositions  
 - PyTorch tensor-based implementation for efficiency  
-- Dagum’s decomposition with distances  
+- Dagum’s decomposition with distances (β-distance)
 - Works directly with pandas DataFrames  
 - Summary tables (via `PrettyTable`)
 
 ---
-
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/yourusername/GiniDecomposition.git
-cd GiniDecomposition
-pip install -r requirements.txt
