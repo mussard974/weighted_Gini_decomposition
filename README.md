@@ -6,6 +6,10 @@ This repository provides a modular Python class for computing the **weighted $\a
 
 **Sampling weights** are introduced in the following decompositions: 
 
+- Dagum, C. *A new approach to the decomposition of the Gini income inequality ratio*.
+  *Empirical Economics* 22, 515–531 (1997).
+  DOI: [doi.org/10.1007/BF01205777](https://link.springer.com/article/10.1007/BF01205777)
+
 - Mornet, P., Zoli, C., Mussard, S., Sadefo-Kamdem, J., Seyte, F., Terraza, M. (2013).  
   *The (α, β)-multi-level α-Gini decomposition with an illustration to income inequality in France in 2005.*  
   *Economic Modelling*, 35(C), 944–963.
@@ -51,3 +55,34 @@ df = pd.DataFrame({
 })
 ```
 
+**Instantiate and fit the decomposition**
+```python
+model = GiniDecomposition(alpha=2)
+model.fit(data=df, value="income", group="group", weight="weight")
+# Show summary
+gini.summary()
+```
+
+**Fit Dagum's Gini decomposition with weights: $\alpha=1$**
+```python
+model = GiniDecomposition(alpha=1)
+model.fit(data=df, value="income", group="group", weight="weight")
+# Show summary
+gini.summary()
+```
+
+**Fit the absolute $\alpha$-Gini index**
+```python
+model = GiniDecomposition(alpha=2, method='absolute')
+model.fit(data=df, value="income", group="group", weight="weight")
+# Show summary
+gini.summary()
+```
+
+**Fit the $(\alpha-\beta)$-decomposition of the Gini index**
+```python
+model = GiniDecomposition(alpha=2, beta = 2)
+model.fit(data=df, value="income", group="group", weight="weight")
+# Show summary
+gini.summary()
+```
