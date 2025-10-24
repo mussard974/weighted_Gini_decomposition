@@ -86,7 +86,8 @@ model.summary()
 
 
 **Fit Dagum's Gini decomposition with weights: $\alpha=1$**
-Note that if $\alpha=1$ this corresponds to the standard weighted Gini index
+
+* Note that if $\alpha=1$ this corresponds to the standard weighted Gini index
 
 ```python
 model = GiniDecomposition(alpha=1)
@@ -96,6 +97,17 @@ gini.summary()
 ```
 
 **Fit the absolute weighted $\alpha$-Gini index**
+
+* The weighted absolute $\alpha$-Gini index:
+$$
+\mathcal G_\alpha = 
+\frac{
+\displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^{\alpha}
+}{
+2\,(\sum_iw_i)^2
+$$
+
+
 ```python
 model = GiniDecomposition(alpha=2, method='absolute')
 model.fit(data=df, value="income", group="group", weight="weight")
