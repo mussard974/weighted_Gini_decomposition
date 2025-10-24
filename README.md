@@ -28,3 +28,26 @@ This repository provides a modular Python class for computing the **weighted $\a
 - Summary tables (via `PrettyTable`)
 
 ---
+
+## Requirements
+
+pandas
+torch
+prettytable
+
+---
+
+## Example
+
+```python
+import pandas as pd
+from gini_decomposition import GiniDecomposition
+
+# Example dataset
+df = pd.DataFrame({
+    "income": [2000, 2500, 3000, 3500, 4000, 4500],
+    "group": ["A", "A", "B", "B", "C", "C"],
+    "weight": [1.2, 0.8, 1.0, 1.0, 0.9, 1.1]
+})
+```
+
