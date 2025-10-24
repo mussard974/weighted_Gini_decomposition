@@ -3,7 +3,7 @@
 $$
 \mathcal G_\alpha = 
 \frac{
-\displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^\alpha
+\displaystyle \sum_i \sum_j w_i w_j  |x_i - x_j|^\alpha
 }{
 2(\sum_iw_i)^2\mu^\alpha}
 $$
@@ -70,7 +70,7 @@ df = pd.DataFrame({
 $$
 \mathcal G_2 = 
 \frac{
-\displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^2
+\displaystyle \sum_i \sum_j w_i w_j  |x_i - x_j|^2
 }{
 2(\sum_iw_i)^2\mu^2}
 $$
@@ -109,7 +109,7 @@ model.summary()
 $$
 \mathcal G_1 = G = 
 \frac{
-\displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|
+\displaystyle \sum_i \sum_j w_i w_j  |x_i - x_j|
 }{
 2(\sum_iw_i)^2\mu}
 $$
@@ -129,7 +129,7 @@ gini.summary()
 $$
 \mathcal G_\alpha^a = 
 \frac{
-\displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^{\alpha}
+\displaystyle \sum_i \sum_j w_i w_j  |x_i - x_j|^{\alpha}
 }{
 2(\sum_iw_i)^2}
 $$
