@@ -106,7 +106,7 @@ $$
 \frac{
 \displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^{\alpha}
 }{
-2\,(\sum_iw_i)^2
+2\,(\sum_iw_i)^2}
 $$
 
 
