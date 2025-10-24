@@ -118,7 +118,6 @@ $$
 ```python
 model = GiniDecomposition(alpha=1)
 model.fit(data=df, value="income", group="group", weight="weight")
-# Show summary
 gini.summary()
 ```
 
@@ -138,15 +137,29 @@ $$
 ```python
 model = GiniDecomposition(alpha=2, method='absolute')
 model.fit(data=df, value="income", group="group", weight="weight")
-# Show summary
 gini.summary()
 ```
 
 **Fit the $(\alpha-\beta)$-decomposition of the Gini index**
 
+* The net between-group component $G_{nb}$ is computed with the $\beta$-directional distance function:
+
+$$
+D_{rp}^{(\beta)} =
+\frac{
+\displaystyle
+\sum_{i \in r}\sum_{j \in p} w_i w_j
+\Big[ (x_i - x_j)_+^{\beta} - (x_j - x_i)_+^{\beta} \Big]
+}{
+\displaystyle
+\sum_{i \in r}\sum_{j \in p} w_i w_j
+\Big[ (x_i - x_j)_+^{\beta} + (x_j - x_i)_+^{\beta} \Big]
+}
+$$
+
+
 ```python
 model = GiniDecomposition(alpha=3, beta = 2)
 model.fit(data=df, value="income", group="group", weight="weight")
-# Show summary
 gini.summary()
 ```
