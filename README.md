@@ -154,7 +154,7 @@ D_{gh}^{(\beta)} =
 \displaystyle
 \sum_{i \in g}\sum_{j \in h} w_i w_j
 \Big[ (x_i - x_j)_+^{\beta} + (x_j - x_i)_+^{\beta} \Big]
-}
+} , \text{ with } \mu_g > \mu_h
 $$
 with
 $$
