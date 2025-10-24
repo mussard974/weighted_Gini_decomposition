@@ -56,7 +56,8 @@ df = pd.DataFrame({
 ```
 
 **Instantiate and fit the decomposition**
-Note that if $\alpha=2$ this corresponds to the weighted coefficient of variation squared
+
+* Note that if $\alpha=2$ this corresponds to the weighted coefficient of variation squared
 
 ```python
 model = GiniDecomposition(alpha=2)
