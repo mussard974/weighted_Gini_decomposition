@@ -9,7 +9,7 @@ This repository provides a modular Python class for computing the **weighted $\a
 - Mornet, P., Zoli, C., Mussard, S., Sadefo-Kamdem, J., Seyte, F., Terraza, M. (2013).  
   *The (α, β)-multi-level α-Gini decomposition with an illustration to income inequality in France in 2005.*  
   *Economic Modelling*, 35(C), 944–963.
-  DOI: 10.1016/j.econmod.2013.06.016 
+  DOI: [10.1016/j.econmod.2013.06.016](https://www.sciencedirect.com/science/article/abs/pii/S0264999313002332) 
 
 - Mussard, S. & Mornet, P. (2019).  
   *A Note on α-Gini Measures.*  
