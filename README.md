@@ -68,7 +68,7 @@ df = pd.DataFrame({
 * Note that if $\alpha=2$ this corresponds to the weighted coefficient of variation squared :
 
 $$
-\mathcal G_\alpha = 
+\mathcal G_2 = 
 \frac{
 \displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^2
 }{
@@ -107,7 +107,7 @@ model.summary()
 * Note that if $\alpha=1$ this corresponds to the standard weighted Gini index :
 
 $$
-\mathcal G_\alpha = 
+\mathcal G_1 = G = 
 \frac{
 \displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|
 }{
@@ -127,7 +127,7 @@ gini.summary()
 * The weighted absolute $\alpha$-Gini index:
 
 $$
-\mathcal G_\alpha = 
+\mathcal G_\alpha^a = 
 \frac{
 \displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^{\alpha}
 }{
@@ -143,8 +143,9 @@ gini.summary()
 ```
 
 **Fit the $(\alpha-\beta)$-decomposition of the Gini index**
+
 ```python
-model = GiniDecomposition(alpha=2, beta = 2)
+model = GiniDecomposition(alpha=3, beta = 2)
 model.fit(data=df, value="income", group="group", weight="weight")
 # Show summary
 gini.summary()
