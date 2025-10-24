@@ -56,6 +56,8 @@ df = pd.DataFrame({
 ```
 
 **Instantiate and fit the decomposition**
+Note that if $\alpha=2$ this corresponds to the weighted coefficient of variation squared
+
 ```python
 model = GiniDecomposition(alpha=2)
 model.fit(data=df, value="income", group="group", weight="weight")
@@ -63,7 +65,7 @@ model.fit(data=df, value="income", group="group", weight="weight")
 model.summary()
 ```
 
-**Gini decomposition: 2 components**
+**Weighted Gini decomposition: 2 components**
 
 | Component                        | Index   |
 |----------------------------------|----------|
@@ -84,6 +86,8 @@ model.summary()
 
 
 **Fit Dagum's Gini decomposition with weights: $\alpha=1$**
+Note that if $\alpha=1$ this corresponds to the standard weighted Gini index
+
 ```python
 model = GiniDecomposition(alpha=1)
 model.fit(data=df, value="income", group="group", weight="weight")
@@ -91,7 +95,7 @@ model.fit(data=df, value="income", group="group", weight="weight")
 gini.summary()
 ```
 
-**Fit the absolute $\alpha$-Gini index**
+**Fit the absolute weighted $\alpha$-Gini index**
 ```python
 model = GiniDecomposition(alpha=2, method='absolute')
 model.fit(data=df, value="income", group="group", weight="weight")
