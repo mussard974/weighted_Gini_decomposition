@@ -1,5 +1,13 @@
 # Decomposition of the weighted $\alpha$-Gini index in *Torch*
 
+$$
+\mathcal G_\alpha = 
+\frac{
+\displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^\alpha
+}{
+2(\sum_iw_i)^2\mu^\alpha}
+$$
+
 ---
 
 This repository provides a modular Python class for computing the **weighted $\alpha$-Gini index decompositions** 
@@ -57,7 +65,15 @@ df = pd.DataFrame({
 
 **Instantiate and fit the decomposition**
 
-* Note that if $\alpha=2$ this corresponds to the weighted coefficient of variation squared
+* Note that if $\alpha=2$ this corresponds to the weighted coefficient of variation squared :
+
+$$
+\mathcal G_\alpha = 
+\frac{
+\displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^2
+}{
+2(\sum_iw_i)^2\mu^2}
+$$
 
 ```python
 model = GiniDecomposition(alpha=2)
@@ -88,7 +104,16 @@ model.summary()
 
 **Fit Dagum's Gini decomposition with weights: $\alpha=1$**
 
-* Note that if $\alpha=1$ this corresponds to the standard weighted Gini index
+* Note that if $\alpha=1$ this corresponds to the standard weighted Gini index :
+
+$$
+\mathcal G_\alpha = 
+\frac{
+\displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|
+}{
+2(\sum_iw_i)^2\mu}
+$$
+
 
 ```python
 model = GiniDecomposition(alpha=1)
@@ -106,7 +131,7 @@ $$
 \frac{
 \displaystyle \sum_i \sum_j w_i w_j \, |x_i - x_j|^{\alpha}
 }{
-2\,(\sum_iw_i)^2}
+2(\sum_iw_i)^2}
 $$
 
 
