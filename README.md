@@ -145,18 +145,21 @@ gini.summary()
 * The net between-group component $G_{nb}$ is computed with the $\beta$-directional distance function:
 
 $$
-D_{rp}^{(\beta)} =
+D_{gh}^{(\beta)} =
 \frac{
 \displaystyle
-\sum_{i \in r}\sum_{j \in p} w_i w_j
+\sum_{i \in g}\sum_{j \in h} w_i w_j
 \Big[ (x_i - x_j)_+^{\beta} - (x_j - x_i)_+^{\beta} \Big]
 }{
 \displaystyle
-\sum_{i \in r}\sum_{j \in p} w_i w_j
+\sum_{i \in g}\sum_{j \in h} w_i w_j
 \Big[ (x_i - x_j)_+^{\beta} + (x_j - x_i)_+^{\beta} \Big]
 }
 $$
-
+with
+$$
+(x)_+ = \max(x, 0)
+$$
 
 ```python
 model = GiniDecomposition(alpha=3, beta = 2)
